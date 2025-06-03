@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <label for="weather">what's the weather like:</label>
+    <select id="weather">
+    <option value="sunny">Sunny</option>
+    <option value="rainy">Rainy</option> 
+    <option value="cloudy">Cloudy</option>
+    <option value="snowy">Snowy</option>
+    <option value="windy">Windy</option>
+    <option value="stormy">Stormy</option>
+    <option value="foggy">Foggy</option>
+    <option value="hail">Hail</option>
+    <option value="thunder">Thunder</option>
+    <option value="drizzle">Drizzle</option>
+    </select>
+    <a href="#" onclick="checkWeather()">Check Weather</a>
+    <p id="outputtext"> weather advice</p>
+
+    <script>
+        function checkWeather() {
+            var weather = document.getElementById("weather").value;
+            var outputText = document.getElementById("outputtext");
+
+            switch (weather) {
+                case "sunny":
+                    outputText.innerHTML = "It's a sunny day! Wear sunglasses and sunscreen.";
+                    break;
+                case "rainy":
+                    outputText.innerHTML = "It's raining! Don't forget your umbrella.";
+                    break;
+                case "cloudy":
+                    outputText.innerHTML = "It's cloudy. A light jacket might be a good idea.";
+                    break;
+                case "snowy":
+                    outputText.innerHTML = "It's snowy! Wear warm clothes and boots.";
+                    break;
+                case "windy":
+                    outputText.innerHTML = "It's windy! Hold onto your hat.";
+                    break;
+                case "stormy":
+                    outputText.innerHTML = "There's a storm! Stay indoors if possible.";
+                    break;
+                case "foggy":
+                    outputText.innerHTML = "It's foggy. Drive carefully!";
+                    break;
+                case "hail":
+                    outputText.innerHTML = "Hail is falling! Seek shelter.";
+                    break;
+                case "thunder":
+                    outputText.innerHTML = "There's thunder! Stay away from tall objects.";
+                    break;
+                case "drizzle":
+                    outputText.innerHTML = "It's drizzling. A light raincoat should suffice.";
+                    break;
+                default:
+                    outputText.innerHTML = "Weather condition not recognized.";
+            }
+        }
+    </script>
+</p>
+    <p>Click the link to check the weather and get advice based on the selected condition.</p>
+
+
+
+    
+</body>
+</html>

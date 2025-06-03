@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>Welcome. Please log in</p>
+
+    <form>
+    
+        <label for="usernameinput">Username:</label><input type="text" id="usernameinput"><br>
+        <label for="passwordinput">Password:</label><input type="password" id="passwordinput"><br>
+        <p id="message"></p>
+        <br/><br/>
+        <a href="#" onclick="checkuser()">Log in</a>
+
+        </form>
+    <script>
+        function checkuser() {
+            var username = document.getElementById("usernameinput").value;
+            var password = document.getElementById("passwordinput").value;
+            var systemUsername = "admin";
+            var systemPassword = "123";
+            if (username === systemUsername && password === systemPassword) {
+                document.getElementById("message").innerHTML = "Login successful!";
+            } else {
+                document.getElementById("message").innerHTML = "Invalid username or password.";
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
